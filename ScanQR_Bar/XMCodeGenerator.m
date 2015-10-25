@@ -19,6 +19,9 @@
  *  @return 二维码图片
  */
 - (UIImage *)generateQRCodeImage:(NSString *)str withWidth:(CGFloat)width{
+    if (__IPHONE_OS_VERSION_MAX_ALLOWED<__IPHONE_8_0) {
+        return [UIImage imageNamed:@"icon"];
+    }
     return [self convertCIImageToUIImage:[self createCIImageForStr:str codeType:XMQRCodeFilter] withSize:CGSizeMake(width, width)];
 }
 
@@ -31,6 +34,9 @@
  *  @return 条形码
  */
 - (UIImage *)generateBarCodeImage:(NSString *)str withSize:(CGSize)size {
+    if (__IPHONE_OS_VERSION_MAX_ALLOWED<__IPHONE_8_0) {
+        return [UIImage imageNamed:@"icon"];
+    }
     return [self convertCIImageToUIImage:[self createCIImageForStr:str codeType:XMBarCodeFilter] withSize:size];
 }
 
