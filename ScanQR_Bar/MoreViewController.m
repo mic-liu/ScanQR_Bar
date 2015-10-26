@@ -34,6 +34,7 @@
         imgView.layer.cornerRadius = 10;
         imgView.layer.borderColor = [UIColor blackColor].CGColor;
         imgView.layer.borderWidth = 1;
+        imgView.layer.masksToBounds = YES;
         [self.view addSubview:imgView];
         
         txtView = [[UITextView alloc]initWithFrame:CGRectMake(0, 0, 300, 50)];
@@ -82,7 +83,7 @@
     if (![str isEqualToString:@""]) {
         imgView.layer.cornerRadius = 10;
         imgView.bounds = CGRectMake(0, 0, imgView.bounds.size.width, imgView.bounds.size.width);
-        imgView.image = [codeGenerator generateQRCodeImage:str withWidth:imgView.bounds.size.width];
+        imgView.image = [codeGenerator generateQRCodeImage:str withWidth:imgView.bounds.size.width colorWithRed:0 green:0 blue:255];
     }
 }
 
@@ -92,7 +93,7 @@
         imgView.layer.cornerRadius = 0;
         imgView.bounds = CGRectMake(0, 0, imgView.bounds.size.width, imgView.bounds.size.width/2);
         imgView.center = imgView.center;
-        imgView.image = [codeGenerator generateBarCodeImage:str withSize:CGSizeMake(imgView.bounds.size.width, imgView.bounds.size.width/2)];
+        imgView.image = [codeGenerator generateBarCodeImage:str withSize:CGSizeMake(imgView.bounds.size.width, imgView.bounds.size.width/2) colorWithRed:255 green:0 blue:0];
     }
 }
 

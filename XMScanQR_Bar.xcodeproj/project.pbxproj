@@ -500,6 +500,7 @@
 				54072ABC1BDC639600C849D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54072ABD1BDC639600C849D6 /* Build configuration list for PBXNativeTarget "XMScanQR_BarTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +509,7 @@
 				54072ABF1BDC639600C849D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

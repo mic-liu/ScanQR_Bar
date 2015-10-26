@@ -31,6 +31,7 @@
     moreVC.tabBarItem .title = @"更多";
     moreVC.tabBarItem.image = [[UIImage imageNamed:@"more"]imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     MainViewController *mainTabVC = [[MainViewController alloc]init];
+    mainTabVC.tabBar.tintColor = [UIColor brownColor];
     mainTabVC.viewControllers = @[qrVC,barVC,moreVC];
     UINavigationController *rootVC = [[UINavigationController alloc]initWithRootViewController:mainTabVC];
     self.window.rootViewController = rootVC;

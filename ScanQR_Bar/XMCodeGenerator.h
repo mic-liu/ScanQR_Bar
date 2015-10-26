@@ -41,4 +41,30 @@ static NSArray *typeArray;
  *  @return 生成的条形码图像
  */
 - (UIImage *)generateBarCodeImage:(NSString *)str withSize:(CGSize)size;
+
+/**
+ *  绘制指定颜色的二维码
+ *
+ *  @param str   内容
+ *  @param width 宽度
+ *  @param red   红 0-255
+ *  @param green 绿 0-255
+ *  @param blue  蓝 0-255
+ *
+ *  @return 图片
+ */
+- (UIImage *)generateQRCodeImage:(NSString *)str withWidth:(CGFloat)width colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
+
+/**
+ *  绘制指定颜色的条形码
+ *
+ *  @param str   内容
+ *  @param size  大小
+ *  @param red   红 0-255
+ *  @param green 绿 0-255
+ *  @param blue  蓝 0-255
+ *
+ *  @return 图片
+ */
+- (UIImage *)generateBarCodeImage:(NSString *)str withSize:(CGSize)size colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue;
 @end
